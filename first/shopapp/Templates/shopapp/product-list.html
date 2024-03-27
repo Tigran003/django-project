@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+
+</head>
+<body>
+  <h1>Products:</h1>
+
+    {% if products %}
+    <div>
+        {% for product in products %}
+            <div>
+
+                <h3><p>{{ product.name }}</p></h3>
+                <h4><p>Description: {{product.description}} </p></h4>
+
+                <h4><p>Price: {{ product.price }}$</p></h4>
+                <h4><p>Discount: {% firstof product.discount 'no discount' %}%</p></h4>
+                <h4><p>Color:{{ product.color }}</p></h4>
+
+
+            </div>
+        {% endfor %}
+    </div>
+    {% else %}
+        <h3>No products yet</h3>
+    {% endif %}
+
+    <div>
+    <a href="{% url 'shopapp:create-product' %}"
+    >Create a new product
+    </a>
+      <div>
+    <a href="{% url 'shopapp:create-order' %}"
+    >Create Order</a>
+    </div>
+
+    </div>
+</body>
+</html>

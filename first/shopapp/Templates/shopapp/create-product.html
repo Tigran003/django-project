@@ -1,0 +1,31 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Create product</title>
+<!--    <link rel="stylesheet" href="{% static 'css/style.css' %}">-->
+</head>
+<body>
+
+ <h1>Create a new product</h1>
+    <div>
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <input class=" input--submitButton" type="submit" value="Create">
+
+
+    </form>
+    </div>
+
+    <div>
+    <a href="{% url 'shopapp:products-list' %}"
+    >Back to products list</a>
+    </div>
+
+</body>
+</html>
