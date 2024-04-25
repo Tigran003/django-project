@@ -7,14 +7,15 @@
 
 </head>
 <body>
-  <h1>Products:</h1>
+  <h1>Orders:</h1>
 
-    {% if Orders %}
+
     <div>
         {% for order in orders %}
             <div>
-                <p>delivery_address: {{ order.delivery_address }}</p>
-                <p>Promocode: {{ order.promocode }}$</p>
+                 <p><a href="{% url 'shopapp:orders_details' pk=order.pk %}"
+                >delivery_address: {{ order.delivery_address }}</a></p>
+                <p>Promocode: {{ order.promocode }}</p>
                 <p>Color: {{ order.color }}</p>
 
 
@@ -22,15 +23,14 @@
 
 
         {% endfor %}
+<div>
+    <a href="{% url 'shopapp:create-order' %}"
+    >Create Order</a>
     </div>
-    {% else %}
-        <h3>No Orders yet</h3>
-    {% endif %}
+        <div>
+    <a href="{% url 'shopapp:products-list' %}"
+    >Go  to products list</a>
+    </div>
 
-    <div>
-    <a href="{% url 'shopapp: order-list' %}"
-    >Create a new order
-    </a>
-    </div>
-</body>
+ </body>
 </html>

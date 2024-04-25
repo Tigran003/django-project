@@ -1,34 +1,42 @@
+{% load i18n %}
 
+{% block title %}
+    {% translate 'Products list' %}
+{% endblock %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Products</title>
-
-</head>
-<body>
-  <h1>Products:</h1>
-
+{%block body%}
+  <h1>
+        {% translate 'Products' %}
+  </h1>
     {% if products %}
+        <div>
+            {% blocktranslate count products_count=products|length %}
+                There is only one product.
+                {% plural %}
+                There are {{ products_count }} products.
+            {% endblocktranslate %}
+        </div>
+    {%endif%}
+
     <div>
         {% for product in products %}
             <div>
+                <p><a href="{% url 'shopapp:product_details' pk=product.pk %}"
+                >{% translate 'Name'%} :{{ product.name }}</a></p>
+                <h4><p>{% translate 'Description'%} : {{product.description}} </p></h4>
 
-                <h3><p>{{ product.name }}</p></h3>
-                <h4><p>Description: {{product.description}} </p></h4>
+                <h4><p>{% translate 'Price'%} : {{ product.price }}$</p></h4>
+                <h4><p>{% translate 'Discount'%} : {% firstof product.discount 'no discount' %}%</p></h4>
+                <h4><p>{% translate 'Color'%} :{{ product.color }}</p></h4>
 
-                <h4><p>Price: {{ product.price }}$</p></h4>
-                <h4><p>Discount: {% firstof product.discount 'no discount' %}%</p></h4>
-                <h4><p>Color:{{ product.color }}</p></h4>
+                {% if product.preview %}
+                        <img src="{{product.preview.url}}" alt="{{product.preview.name}}" width="500" height="300">
+                {% endif %}
 
 
             </div>
         {% endfor %}
     </div>
-    {% else %}
-        <h3>No products yet</h3>
-    {% endif %}
 
     <div>
     <a href="{% url 'shopapp:create-product' %}"
@@ -38,7 +46,10 @@
     <a href="{% url 'shopapp:create-order' %}"
     >Create Order</a>
     </div>
+        <div>
+    <a href="{% url 'shopapp:order-list' %}"
+    > Go to Orders list</a>
+    </div>
 
     </div>
-</body>
-</html>
+{%endblock%}

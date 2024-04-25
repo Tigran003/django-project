@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.db.models import QuerySet
 from django.http import HttpRequest
 
-from shopapp.models import Product, Order
+from  .models import Product, Order
 # from  shopapp.admin_mixins import ExportAsCSVMixin
 
 
@@ -32,10 +32,10 @@ class ProductAdmin(admin.ModelAdmin):
     inlines = [
         OrderInline,
     ]
-    list_display = 'pk', 'name', 'description_short','price','created_at','is_archived','color','photo'
+    list_display = 'pk', 'name', 'description_short','price','created_at','is_archived','color','preview'
     list_display_links = 'pk', 'name'
     ordering = '-name', 'pk'
-    search_fields = 'name','color','photo'
+    search_fields = 'name','color','preview'
     fieldsets = [
         (None, {
             'fields': ('name', 'description'),
@@ -45,7 +45,7 @@ class ProductAdmin(admin.ModelAdmin):
             'classes': ('collapse',)
         }),
         ('Picture options',{
-            'fields':('photo',),
+            'fields':('preview',),
             'classes': ('collapse',)
         }),
         ('Price options', {

@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 
+from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
+
+import first
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -37,7 +42,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+    'django_filters',
+    'drf_spectacular',
+    'django.contrib.admindocs',
+
     'shopapp.apps.ShopappConfig',
+    'accounts.apps.AccountsConfig',
+    'myapiapp.apps.MyapiappConfig',
+    'blogapp.apps.BlogappConfig',
+
+
+
+
 
 ]
 
@@ -49,7 +67,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+    'django.contrib.admindocs.middleware.XViewMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    ]
 
 ROOT_URLCONF = 'first.urls'
 
@@ -69,7 +89,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'first.wsgi.application'
+# WSGI_APPLICATION = 'first.wsgi.application'
 
 
 # Database
@@ -113,11 +133,19 @@ USE_I18N = True
 
 USE_TZ = True
 
+LANGUAGES= (
+    ('hy', _('Armenian') ),
+    ('ru', _('Russia')),
+    ('en', _('English')),
+)
+LOCALE_PATHS = [
+    BASE_DIR / 'locale/'
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-
+STATIC_URL = '/static/'
 
 
 
@@ -127,3 +155,41 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = reverse_lazy("accounts:about_me")
+LOGIN_URL = reverse_lazy("accounts:login")
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'sergeevt@gmail.com'
+EMAIL_HOST_PASSWORD = 'ubhrvexjlzltznos'
+
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'uploads'
+
+
+LOGGING = {
+    'version': 1,
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django.db.backends': {
+            'level': 'DEBUG',
+            'handlers': ['console'],
+        }
+    },
+}
