@@ -14,15 +14,19 @@ from  shopapp.models import Product
 @api_view()
 def hello_world_view(request: Request) ->Response:
     return Response({"message":'Hello World!'})
+#
+# class GroupListView(APIView):
+#     def get(self,request: Request) -> Response:
+#         groups = Group.objects.all()
+#         serialized = GroupSerializer(groups, many=True)
+#         return Response({'groups':serialized.data})
+#
+# class ProductListView(APIView):
+#     def get(self,request : Request) -> Response:
+#         products = Product.objects.all()
+#         serialized = ProductSerializer(products, many=True)
+#         return Response({'products':serialized.data})
 
-class GroupListView(APIView):
-    def get(self,request: Request) -> Response:
-        groups = Group.objects.all()
-        serialized = GroupSerializer(groups, many=True)
-        return Response({'groups':serialized.data})
-
-class ProductListView(APIView):
-    def get(self,request : Request) -> Response:
-        products = Product.objects.all()
-        serialized = ProductSerializer(products, many=True)
-        return Response({'products':serialized.data})
+class GroupListView(ListCreateAPIView):
+    queryset = Group.objects.all()
+    serializer_class = GroupSerializer
