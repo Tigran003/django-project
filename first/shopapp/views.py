@@ -1,4 +1,4 @@
-
+import logging
 from timeit import default_timer
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.models import Group, User
@@ -9,6 +9,50 @@ from django.views.generic import ListView, View, UpdateView, DeleteView, DetailV
 from django.utils.translation import gettext_lazy as _, ngettext
 from .models import Product, Order
 from .forms import OrderForm, ProductForm
+from rest_framework.viewsets import ModelViewSet
+from rest_framework.filters import SearchFilter, OrderingFilter
+from django_filters.rest_framework import DjangoFilterBackend
+from myapiapp.serializer import ProductSerializer
+from drf_spectacular.utils import extend_schema, OpenApiResponse
+
+
+logger = logging.getLogger(__name__)
+
+
+
+class ProductViewSet(ModelViewSet):
+
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    filter_backends = [
+        SearchFilter,
+        DjangoFilterBackend,
+        OrderingFilter,
+    ]
+    search_fields = ["name", "description",]
+    filterset_fields = [
+        "name",
+        "description",
+        "price",
+        "discount",
+        "archived"
+    ]
+    ordering_fields = [
+        "name",
+        "price",
+        "discount",
+    ]
+
+    @extend_schema(
+        summary='Get one product by ID',
+        description='Retrieves **product**, returns 404 if not found',
+        responses={
+            200: ProductSerializer,
+            404: OpenApiResponse(description='Empty response, product by id not found'),
+        }
+    )
+    def retrieve(self, *args, **kwargs):
+        return super().retrieve(*args, **kwargs)
 
 
 def shop_index(request: HttpRequest) -> HttpResponse:

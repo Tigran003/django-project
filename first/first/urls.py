@@ -20,6 +20,7 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls.i18n import i18n_patterns
 from drf_spectacular.views  import SpectacularAPIView,SpectacularSwaggerView,SpectacularRedocView
+import debug_toolbar
 
 
 
@@ -53,4 +54,8 @@ if settings.DEBUG:
          static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     )
 
+
+urlpatterns.append(
+        path('__debug__/', include(debug_toolbar.urls)),
+    )
 
