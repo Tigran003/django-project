@@ -1,3 +1,6 @@
-2024-04-27 14:29:03,414 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
-2024-04-27 14:35:40,197 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
-2024-04-27 14:36:18,132 [WARNING] in django.request: Not Found: /
+2024-04-29 08:26:58,163 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-29 08:27:31,613 [WARNING] in django.request: Not Found: /
+2024-04-29 08:27:32,262 [WARNING] in django.request: Not Found: /favicon.ico
+2024-04-29 08:28:23,482 [WARNING] in django.request: Not Found: /accounts/
+2024-04-29 08:49:56,928 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-29 08:50:06,611 [WARNING] in django.request: Not Found: /
