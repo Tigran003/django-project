@@ -1,0 +1,474 @@
+2024-04-29 08:26:58,163 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-29 08:27:31,613 [WARNING] in django.request: Not Found: /
+2024-04-29 08:27:32,262 [WARNING] in django.request: Not Found: /favicon.ico
+2024-04-29 08:28:23,482 [WARNING] in django.request: Not Found: /accounts/
+2024-04-29 08:49:56,928 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-29 08:50:06,611 [WARNING] in django.request: Not Found: /
+2024-04-30 14:22:26,486 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 10:24:03,390 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 10:24:46,553 [WARNING] in django.request: Not Found: /
+2024-04-30 10:24:46,950 [WARNING] in django.request: Not Found: /favicon.ico
+2024-04-30 10:25:48,280 [WARNING] in django.request: Not Found: /shop/api/schema/swagger/
+2024-04-30 10:26:44,259 [WARNING] in django.request: Not Found: /shop/api/schema/redoc/
+2024-04-30 10:35:08,100 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 10:35:13,484 [WARNING] in django.request: Not Found: /
+2024-04-30 10:37:13,822 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 10:37:26,499 [WARNING] in django.request: Not Found: /
+2024-04-30 10:37:36,183 [ERROR] in django.request: Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 92, in get_operation
+    parameters = self._get_parameters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 260, in _get_parameters
+    **dict_helper(self._get_filter_parameters()),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 546, in _get_filter_parameters
+    parameters += filter_extension.get_schema_operation_parameters(self)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/contrib/django_filters.py", line 58, in get_schema_operation_parameters
+    filterset_class = self.target.get_filterset_class(auto_schema.view, get_manager(model).none())
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/rest_framework/backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 63, in __new__
+    new_class.base_filters = new_class.get_filters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 350, in get_filters
+    raise TypeError(
+TypeError: 'Meta.fields' must not contain non-model field names: archived
+2024-04-30 10:37:36,553 [ERROR] in django.request: Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 92, in get_operation
+    parameters = self._get_parameters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 260, in _get_parameters
+    **dict_helper(self._get_filter_parameters()),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 546, in _get_filter_parameters
+    parameters += filter_extension.get_schema_operation_parameters(self)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/contrib/django_filters.py", line 58, in get_schema_operation_parameters
+    filterset_class = self.target.get_filterset_class(auto_schema.view, get_manager(model).none())
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/rest_framework/backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 63, in __new__
+    new_class.base_filters = new_class.get_filters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 350, in get_filters
+    raise TypeError(
+TypeError: 'Meta.fields' must not contain non-model field names: archived
+2024-04-30 10:37:47,857 [ERROR] in django.request: Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 92, in get_operation
+    parameters = self._get_parameters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 260, in _get_parameters
+    **dict_helper(self._get_filter_parameters()),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 546, in _get_filter_parameters
+    parameters += filter_extension.get_schema_operation_parameters(self)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/contrib/django_filters.py", line 58, in get_schema_operation_parameters
+    filterset_class = self.target.get_filterset_class(auto_schema.view, get_manager(model).none())
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/rest_framework/backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 63, in __new__
+    new_class.base_filters = new_class.get_filters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 350, in get_filters
+    raise TypeError(
+TypeError: 'Meta.fields' must not contain non-model field names: archived
+2024-04-30 10:37:48,232 [ERROR] in django.request: Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 92, in get_operation
+    parameters = self._get_parameters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 260, in _get_parameters
+    **dict_helper(self._get_filter_parameters()),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 546, in _get_filter_parameters
+    parameters += filter_extension.get_schema_operation_parameters(self)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/contrib/django_filters.py", line 58, in get_schema_operation_parameters
+    filterset_class = self.target.get_filterset_class(auto_schema.view, get_manager(model).none())
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/rest_framework/backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 63, in __new__
+    new_class.base_filters = new_class.get_filters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 350, in get_filters
+    raise TypeError(
+TypeError: 'Meta.fields' must not contain non-model field names: archived
+2024-04-30 10:37:49,915 [ERROR] in django.request: Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 92, in get_operation
+    parameters = self._get_parameters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 260, in _get_parameters
+    **dict_helper(self._get_filter_parameters()),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 546, in _get_filter_parameters
+    parameters += filter_extension.get_schema_operation_parameters(self)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/contrib/django_filters.py", line 58, in get_schema_operation_parameters
+    filterset_class = self.target.get_filterset_class(auto_schema.view, get_manager(model).none())
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/rest_framework/backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 63, in __new__
+    new_class.base_filters = new_class.get_filters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 350, in get_filters
+    raise TypeError(
+TypeError: 'Meta.fields' must not contain non-model field names: archived
+2024-04-30 10:37:50,308 [ERROR] in django.request: Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 92, in get_operation
+    parameters = self._get_parameters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 260, in _get_parameters
+    **dict_helper(self._get_filter_parameters()),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 546, in _get_filter_parameters
+    parameters += filter_extension.get_schema_operation_parameters(self)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/contrib/django_filters.py", line 58, in get_schema_operation_parameters
+    filterset_class = self.target.get_filterset_class(auto_schema.view, get_manager(model).none())
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/rest_framework/backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 63, in __new__
+    new_class.base_filters = new_class.get_filters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 350, in get_filters
+    raise TypeError(
+TypeError: 'Meta.fields' must not contain non-model field names: archived
+2024-04-30 10:38:20,172 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 10:38:24,548 [WARNING] in django.request: Not Found: /
+2024-04-30 10:38:33,371 [ERROR] in django.request: Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 92, in get_operation
+    parameters = self._get_parameters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 260, in _get_parameters
+    **dict_helper(self._get_filter_parameters()),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 546, in _get_filter_parameters
+    parameters += filter_extension.get_schema_operation_parameters(self)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/contrib/django_filters.py", line 58, in get_schema_operation_parameters
+    filterset_class = self.target.get_filterset_class(auto_schema.view, get_manager(model).none())
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/rest_framework/backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 63, in __new__
+    new_class.base_filters = new_class.get_filters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 350, in get_filters
+    raise TypeError(
+TypeError: 'Meta.fields' must not contain non-model field names: archived
+2024-04-30 10:38:33,768 [ERROR] in django.request: Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 92, in get_operation
+    parameters = self._get_parameters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 260, in _get_parameters
+    **dict_helper(self._get_filter_parameters()),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 546, in _get_filter_parameters
+    parameters += filter_extension.get_schema_operation_parameters(self)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/contrib/django_filters.py", line 58, in get_schema_operation_parameters
+    filterset_class = self.target.get_filterset_class(auto_schema.view, get_manager(model).none())
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/rest_framework/backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 63, in __new__
+    new_class.base_filters = new_class.get_filters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 350, in get_filters
+    raise TypeError(
+TypeError: 'Meta.fields' must not contain non-model field names: archived
+2024-04-30 10:38:44,045 [ERROR] in django.request: Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 92, in get_operation
+    parameters = self._get_parameters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 260, in _get_parameters
+    **dict_helper(self._get_filter_parameters()),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 546, in _get_filter_parameters
+    parameters += filter_extension.get_schema_operation_parameters(self)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/contrib/django_filters.py", line 58, in get_schema_operation_parameters
+    filterset_class = self.target.get_filterset_class(auto_schema.view, get_manager(model).none())
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/rest_framework/backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 63, in __new__
+    new_class.base_filters = new_class.get_filters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 350, in get_filters
+    raise TypeError(
+TypeError: 'Meta.fields' must not contain non-model field names: archived
+2024-04-30 10:38:53,363 [ERROR] in django.request: Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 92, in get_operation
+    parameters = self._get_parameters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 260, in _get_parameters
+    **dict_helper(self._get_filter_parameters()),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 546, in _get_filter_parameters
+    parameters += filter_extension.get_schema_operation_parameters(self)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/contrib/django_filters.py", line 58, in get_schema_operation_parameters
+    filterset_class = self.target.get_filterset_class(auto_schema.view, get_manager(model).none())
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/rest_framework/backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 63, in __new__
+    new_class.base_filters = new_class.get_filters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 350, in get_filters
+    raise TypeError(
+TypeError: 'Meta.fields' must not contain non-model field names: archived
+2024-04-30 10:39:06,559 [WARNING] in django.request: Not Found: /en//shop/
+2024-04-30 10:39:29,503 [WARNING] in django.request: Not Found: /en/shop/api/schema/swagger/
+2024-04-30 10:39:53,457 [ERROR] in django.request: Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/generators.py", line 256, in parse
+    operation = view.schema.get_operation(
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 92, in get_operation
+    parameters = self._get_parameters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 260, in _get_parameters
+    **dict_helper(self._get_filter_parameters()),
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/openapi.py", line 546, in _get_filter_parameters
+    parameters += filter_extension.get_schema_operation_parameters(self)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/drf_spectacular/contrib/django_filters.py", line 58, in get_schema_operation_parameters
+    filterset_class = self.target.get_filterset_class(auto_schema.view, get_manager(model).none())
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/rest_framework/backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 63, in __new__
+    new_class.base_filters = new_class.get_filters()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django_filters/filterset.py", line 350, in get_filters
+    raise TypeError(
+TypeError: 'Meta.fields' must not contain non-model field names: archived
+2024-04-30 10:41:08,136 [INFO] in django.utils.autoreload: /mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/mysite/shopapp/views.py changed, reloading.
+2024-04-30 10:41:16,422 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 10:41:43,311 [WARNING] in django.request: Not Found: /api/schema/swager/

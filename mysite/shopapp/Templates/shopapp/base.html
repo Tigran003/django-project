@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+         Base
+        {% endblock %}
+    </title>
+</head>
+<body>
+    {% block body %}
+    <h1> Base </h1>
+     {% endblock %}
+</body>
+    <div>
+       <h4>Time:{% now 'H:i:s' %}</h4>
+       {% now 'l' as current_weekday %}
+       {% now 'm' as current_month %}
+       {% now 'Y' as current_year %}
+       {% now 'd' as current_day%}
+       <h4>  Today is   {{current_day}}/{{current_month}}/{{current_year}}:{{current_weekday}}:</h4>
+   </div>
+        <div>
+    <a href="{% url 'shopapp:products-list' %}"
+    >Go  to products list</a>
+    </div>
+<div>
+    <a href="{% url 'shopapp:order-list' %}"
+    > Go to Orders list</a>
+    </div>
+
+</html>

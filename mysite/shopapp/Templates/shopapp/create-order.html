@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create order</title>
+</head>
+<body>
+  <h1>Create Order</h1>
+ <h1>Create a new order</h1>
+    <div>
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">
+            Create
+        </button>
+    </form>
+    </div>
+<div>
+    <a href="{% url 'shopapp:order-list' %}"
+    >Orders list</a>
+    </div>
+ <div>
+    <a href="{% url 'shopapp:create-order' %}"
+    >Create Order</a>
+    </div>
+
+</body>
+</html>
