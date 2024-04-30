@@ -1,11 +1,11 @@
 import logging
 from timeit import default_timer
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import Group, User
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect, request
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy, reverse
-from django.views.generic import ListView, View, UpdateView, DeleteView, DetailView
+from django.views.generic import ListView, View, UpdateView, DeleteView, DetailView, CreateView
 from django.utils.translation import gettext_lazy as _, ngettext
 from .models import Product, Order
 from .forms import OrderForm, ProductForm
@@ -72,36 +72,6 @@ def groups_list(request: HttpRequest) -> HttpResponse:
     return render(request, 'shopapp/groups-list.html', context=context)
 
 
-def orders_list(request: HttpRequest) -> HttpResponse:
-    context = {
-        'orders': Order.objects.all()
-    }
-
-    # queryset = (
-    #          Order.objects
-    #         .select_related('user')
-    #         .prefetch_related('products')
-    #         .all()
-    #     )
-
-    return render(request, 'shopapp/order-list.html', context=context)
-
-# def products_list(request: HttpRequest) -> HttpResponse:
-#
-#     context = {
-#         'products': Product.objects.all()
-#
-#     }
-#     return render(request, 'shopapp/product-list.html', context=context)
-
-# class ProductListView(TemplateView):
-#     template_name = 'shopapp/product-list.html'
-#
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context['products'] = Product.objects.all()
-#         return context
-
 
 class ProductDetailView(View):
     def get(self,request:HttpRequest,pk: int) -> HttpResponse:
@@ -122,7 +92,7 @@ class OrderDetailView(PermissionRequiredMixin, DetailView):
     )
 
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(LoginRequiredMixin,UpdateView):
     model = Product
     fields = 'name','description','price','discount',"preview"
     template_name_suffix = '_update_form'
@@ -133,7 +103,7 @@ class ProductUpdateView(UpdateView):
         )
 
 
-class OrderUpdateView(UpdateView):
+class OrderUpdateView(LoginRequiredMixin,UpdateView):
     model = Order
     form_class = OrderForm
     template_name_suffix = '_update_'
@@ -145,7 +115,7 @@ class OrderUpdateView(UpdateView):
         )
 
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(LoginRequiredMixin,DeleteView):
     model = Product
     success_url = reverse_lazy('shopapp:products-list')
 
@@ -156,28 +126,28 @@ class ProductDeleteView(DeleteView):
         return HttpResponseRedirect(success_url)
 
 
-class ProductsListView(LoginRequiredMixin,ListView):
+class ProductsListView(ListView):
     template_name = 'shopapp/product-list.html'
     model = Product
     context_object_name = 'products'
 
 
-def create_products(request: HttpRequest) -> HttpResponse:
-    if request.method == 'POST':
-        form = ProductForm(request.POST)
+class OrdersListView(LoginRequiredMixin,ListView):
+    template_name = 'shopapp/order-list.html'
+    model = Order
+    context_object_name = 'order'
 
-        if form.is_valid():
-            name = form.cleaned_data['name']
-            price = form.cleaned_data['price']
-            Product.objects.create(name=name, price=price)
-    else:
-        form = ProductForm()
 
-    context = {
-    'form' : form
 
-    }
-    return render(request, 'shopapp/create-product.html', context=context)
+class ProductCreateView(LoginRequiredMixin, CreateView):
+    def test_func(self):
+        # return self.request.user.groups.filter(name='secret-group').exists()
+        return self.request.user.is_superuser
+
+    model = Product
+    fields = "name", "price", "description", "discount", "preview"
+    # form_class = ProductForm
+    success_url = reverse_lazy("shopapp:products")
 
 
 def create_order(request: HttpRequest) -> HttpResponse:

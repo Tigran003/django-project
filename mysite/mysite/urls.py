@@ -55,7 +55,7 @@ if settings.DEBUG:
     )
 
 
-urlpatterns.append(
-        path('__debug__/', include(debug_toolbar.urls)),
-    )
+    urlpatterns.append(
+            path('__debug__/', include(debug_toolbar.urls)),
+        )
 

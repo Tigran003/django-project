@@ -1,17 +1,11 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Orders</title>
+{% block title %}
+    Orders list
+{% endblock %}
 
-</head>
-<body>
-  <h1>Orders:</h1>
-
-
+{% block body %}
     <div>
-        {% for order in orders %}
+        {% for order in order %}
             <div>
                  <p><a href="{% url 'shopapp:orders_details' pk=order.pk %}"
                 >delivery_address: {{ order.delivery_address }}</a></p>
@@ -31,6 +25,4 @@
     <a href="{% url 'shopapp:products-list' %}"
     >Go  to products list</a>
     </div>
-
- </body>
-</html>
+{% endblock %}

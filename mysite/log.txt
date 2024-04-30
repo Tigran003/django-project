@@ -472,3 +472,287 @@ TypeError: 'Meta.fields' must not contain non-model field names: archived
 2024-04-30 10:41:08,136 [INFO] in django.utils.autoreload: /mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/mysite/shopapp/views.py changed, reloading.
 2024-04-30 10:41:16,422 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
 2024-04-30 10:41:43,311 [WARNING] in django.request: Not Found: /api/schema/swager/
+2024-04-30 10:44:19,006 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 10:44:25,384 [WARNING] in django.request: Not Found: /
+2024-04-30 10:48:18,394 [INFO] in django.utils.autoreload: /mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/mysite/mysite/urls.py changed, reloading.
+2024-04-30 10:48:26,511 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 10:48:31,240 [WARNING] in django.request: Not Found: /
+2024-04-30 10:52:10,087 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 10:52:14,964 [WARNING] in django.request: Not Found: /
+2024-04-30 10:58:22,748 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 10:58:38,418 [WARNING] in django.request: Not Found: /
+2024-04-30 12:13:25,285 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 12:13:51,984 [WARNING] in django.request: Not Found: /
+2024-04-30 12:18:12,959 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 12:18:26,658 [WARNING] in django.request: Not Found: /
+2024-04-30 12:20:50,803 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 12:21:06,696 [WARNING] in django.request: Not Found: /
+2024-04-30 12:21:51,485 [ERROR] in django.request: Internal Server Error: /shop/create/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/mysite/shopapp/views.py", line 173, in create_products
+    discount = form.cleaned_data['discount']
+KeyError: 'discount'
+2024-04-30 12:23:50,488 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 12:24:03,726 [WARNING] in django.request: Not Found: /
+2024-04-30 12:30:36,409 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 12:30:49,489 [WARNING] in django.request: Not Found: /
+2024-04-30 12:33:09,272 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 12:33:22,962 [WARNING] in django.request: Not Found: /
+2024-04-30 12:47:43,270 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 12:49:14,629 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 12:51:20,669 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 12:51:34,905 [WARNING] in django.request: Not Found: /
+2024-04-30 13:26:59,778 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 13:27:15,365 [WARNING] in django.request: Not Found: /
+2024-04-30 13:27:30,892 [WARNING] in django.request: Not Found: /shop/create/
+2024-04-30 13:29:11,489 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 13:29:26,293 [WARNING] in django.request: Not Found: /
+2024-04-30 13:30:33,293 [WARNING] in django.request: Not Found: /shop/create-product/
+2024-04-30 13:40:46,460 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 13:41:01,439 [WARNING] in django.request: Not Found: /
+2024-04-30 13:41:26,056 [ERROR] in django.request: Internal Server Error: /shop/products/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'shop'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'shop' is not a registered namespace
+2024-04-30 13:41:44,870 [WARNING] in django.request: Not Found: /shop/products-list/
+2024-04-30 13:46:23,224 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 13:46:37,670 [WARNING] in django.request: Not Found: /
+2024-04-30 13:49:43,018 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 13:49:57,568 [WARNING] in django.request: Not Found: /
+2024-04-30 13:53:16,041 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 13:53:30,620 [WARNING] in django.request: Not Found: /
+2024-04-30 13:54:01,506 [ERROR] in django.request: Internal Server Error: /shop/order/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: shopapp/order_list.html
+2024-04-30 13:54:32,645 [ERROR] in django.request: Internal Server Error: /shop/order/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: shopapp/order_list.html
+2024-04-30 13:54:45,142 [WARNING] in django.request: Not Found: /shop/order-list/
+2024-04-30 13:56:20,358 [ERROR] in django.request: Internal Server Error: /shop/order/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: shopapp/order_list.html
+2024-04-30 13:56:20,944 [INFO] in django.utils.autoreload: /mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/mysite/shopapp/views.py changed, reloading.
+2024-04-30 13:56:56,515 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 13:57:11,432 [WARNING] in django.request: Not Found: /
+2024-04-30 13:58:04,375 [ERROR] in django.request: Internal Server Error: /shop/create/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'shop'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'shop' is not a registered namespace
+2024-04-30 13:59:27,690 [WARNING] in django.request: Not Found: /shopapp/create/
+2024-04-30 13:59:40,932 [ERROR] in django.request: Internal Server Error: /shop/create/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'shop'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'shop' is not a registered namespace
+2024-04-30 14:01:21,213 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 14:01:42,392 [WARNING] in django.request: Not Found: /
+2024-04-30 14:07:06,504 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 14:07:21,800 [WARNING] in django.request: Not Found: /
+2024-04-30 14:20:46,002 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 14:21:01,511 [WARNING] in django.request: Not Found: /
+2024-04-30 14:21:31,820 [ERROR] in django.request: Internal Server Error: /shop/order/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 502, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    return parser.parse()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 28: 'endblock'. Did you forget to register or load this tag?
+2024-04-30 14:23:52,286 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 14:24:10,456 [WARNING] in django.request: Not Found: /
+2024-04-30 14:28:28,790 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 14:28:55,851 [WARNING] in django.request: Not Found: /
+2024-04-30 14:31:06,376 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 14:31:25,156 [WARNING] in django.request: Not Found: /
+2024-04-30 14:34:58,986 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 14:35:15,957 [WARNING] in django.request: Not Found: /
+2024-04-30 14:40:59,397 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 14:41:04,171 [WARNING] in django.request: Not Found: /
+2024-04-30 14:41:04,605 [WARNING] in django.request: Not Found: /favicon.ico
+2024-04-30 14:45:24,667 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-04-30 14:45:33,039 [WARNING] in django.request: Not Found: /
