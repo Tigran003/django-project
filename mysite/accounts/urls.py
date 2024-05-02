@@ -1,3 +1,16 @@
+"""
+This configuration file manages user authentication and account management related paths,
+such as login, logout, registration, password change, and password reset functionalities.
+
+-'login/ ': This view handles user authentication. If the user is already authenticated and attempts to access this page, they are redirected to a predefined page.
+-'register/':This view handles new user registration, allowing users to create a new account.
+-'logout/':This function-based view handles the logout process. When invoked, it terminates the user's session and can redirect the user to another page, typically the homepage or login page.
+-'changepassword':This view allows authenticated users to change their password. It typically requires the user to provide the current password and a new password.
+-'about_me/:This view displays information about the user, typically accessed from the user's profile. This is a class-based view, possibly rendering a template that includes user-specific data.
+"""
+
+
+
 from django.contrib.auth.views import LoginView, PasswordResetConfirmView, PasswordResetView, PasswordResetDoneView, \
     PasswordResetCompleteView
 from django.urls import path

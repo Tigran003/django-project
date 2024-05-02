@@ -1,3 +1,23 @@
+"""
+The accounts app is designed to handle user authentication, account management,
+and password operations within a Django application.
+It includes functionalities for user registration, login, logout, password changes, and password resets.
+
+RegisterView: Manages the user registration process.
+login_view: Handles user login requests.
+login_view: Handles user login requests.
+MyLogoutView: A class-based view for handling logout using Django’s built-in LogoutView.
+change_password: Allows users to change their password.
+AboutMeView: Displays the "About Me" profile page.
+ResetPasswordView: Handles password reset requests.
+ResetPasswordDoneView: Shows a confirmation page after a successful password reset request submission.
+PasswordResetConfirmViewCustom: Allows users to set a new password using a token received by email.
+"""
+
+
+
+
+
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm, PasswordResetForm
