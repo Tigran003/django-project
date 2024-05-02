@@ -1,3 +1,8 @@
+""""
+This Django administration documentation covers the setup and customization
+of Django admin panels for Product and Order models in a web application.
+"""
+
 from django.contrib import admin
 from django.db.models import QuerySet
 from django.http import HttpRequest

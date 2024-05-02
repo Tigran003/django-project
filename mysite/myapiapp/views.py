@@ -1,3 +1,11 @@
+"""
+Below is the documentation for the provided Django/DRF code, which defines an API endpoint
+and a class-based view to interact with Group model instances.
+This code defines a simple API using Django and Django Rest Framework (DRF). It includes:
+
+"""
+
+
 from django.contrib.auth.models import Group
 from rest_framework.decorators import api_view
 from rest_framework.generics import GenericAPIView, ListCreateAPIView

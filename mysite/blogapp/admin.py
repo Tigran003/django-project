@@ -1,4 +1,10 @@
+""""
+This documentation provides a detailed overview of customizing the Django admin interface
+for a news or article management system.
+It covers the setup of the admin panel for managing
+Author, Category, Tag, and Article models from a Django application
 
+"""
 from django.contrib import admin
 from .models import Author, Category, Tag, Article
 

@@ -1,3 +1,10 @@
+"""
+This Django management command, defined in a custom script,
+is used to automatically populate the database with a set of predefined products.
+Each product is added with a specified name and price if it does not already exist in the database.
+The command is implemented in a Django project and utilizes Django's ORM to interact with the database.
+"""
+
 from django.core.management import BaseCommand
 
 from   shopapp.models import Product

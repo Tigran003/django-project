@@ -1,3 +1,9 @@
+"""
+This documentation describes the URL configuration for a Django application named ShopApp.
+The configuration handles URL routing, linking URLs to specific views,
+and is designed for an e-commerce or shopping application context
+"""
+
 
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter

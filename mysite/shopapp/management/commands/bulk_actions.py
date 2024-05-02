@@ -1,5 +1,13 @@
-from django.core.management import BaseCommand
+"""
+This Python script is a Django management command part of a Django project named shopapp.
+The script's primary function is to perform bulk updates on a Product model by applying
+a discount to all products that include "Smartphone" in their name.
+Additionally, the script is structured to demonstrate the use of Django's bulk operations
+but primarily focuses on updating records for this example.
+"""
 
+
+from django.core.management import BaseCommand
 from shopapp.models import Product
 
 class Command(BaseCommand):

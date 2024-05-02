@@ -1,3 +1,9 @@
+"""
+This document details the Django models used for managing products
+and orders within an application named shopapp.
+"""
+
+
 from django.contrib.auth.models import User
 from django.db import models
 

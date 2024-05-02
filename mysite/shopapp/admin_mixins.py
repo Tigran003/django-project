@@ -1,3 +1,9 @@
+"""
+This Python code snippet defines a Django Mixin called ExportAsCSVMixin that provides functionality
+to export model data as a CSV file through a Django view.
+This mixin can be integrated with Django admin or any other Django view to enable CSV exports.
+Below is a detailed breakdown of the components and functionality provided by the ExportAsCSVMixin class.
+"""
 
 from django.db.models import QuerySet
 from django.db.models.options import Options

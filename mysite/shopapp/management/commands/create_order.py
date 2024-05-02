@@ -1,3 +1,10 @@
+"""
+This command is specifically tailored for demonstration or utility purposes within
+a development environment due to the hardcoded values.
+For production usage, additional modifications such as parameterizing input values
+might be necessary to enhance its flexibility and applicability.
+"""
+
 from typing import Sequence
 
 from django.contrib.auth.models import User

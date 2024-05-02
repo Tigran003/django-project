@@ -1,3 +1,10 @@
+"""
+This documentation provides an overview of the aggregate_demo management command for
+a Django project associated with a shopping application (shopapp).
+This command demonstrates the use of Django's ORM aggregation and annotation functionalities
+ to generate reports directly from the database.
+"""
+
 from django.core.management import BaseCommand
 from django.db.models import Avg, Min, Max, Count, Sum
 

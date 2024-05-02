@@ -1,3 +1,10 @@
+"""
+This documentation outlines the structure and relationships of the models
+used in a Django application designed to manage articles
+and their associated metadata like authors, categories, and tags.
+"""
+
+
 from django.db import models
 
 

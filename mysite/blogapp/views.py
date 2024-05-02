@@ -1,3 +1,12 @@
+"""
+This documentation includes descriptions of the class itself, its attributes,
+and methods, providing a clear understanding of its role and functionality within a Django application.
+-ArticleListView:is a Django class-based view that inherits from ListView.
+It is specifically tailored to display a list of articles, which are instances of the Article model.
+"""
+
+
+
 from django.shortcuts import render
 from django.views.generic import ListView
 
