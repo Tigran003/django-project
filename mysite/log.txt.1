@@ -1,4 +1,46 @@
-2024-04-27 15:44:29,405 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
-2024-04-27 15:44:49,075 [WARNING] in django.request: Not Found: /
-2024-04-27 15:44:50,898 [WARNING] in django.request: Not Found: /favicon.ico
-2024-04-27 15:45:45,588 [WARNING] in django.request: Not Found: /
+2024-05-06 08:15:14,652 [ERROR] in django.request: Internal Server Error: /shop/order/
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'shopapp'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 242, in render
+    nodelist.append(node.render_annotated(context))
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/mnt/c/Users/My PC/PycharmProjects/ThisIsMyProject/venv/lib/python3.10/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'shopapp' is not a registered namespace

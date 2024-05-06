@@ -30,11 +30,20 @@ SECRET_KEY = 'django-insecure-70lye2s3)_*u53n4)d13&_1#2*&+5a5(e$_jh&z9(sxrcy#iho
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['*']
+
 INTERNAL_IPS = [
     '127.0.0.1',
 ]
 
+if DEBUG:
+    import socket
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS.append("10.0.2.2")
+    INTERNAL_IPS.extend(
+        [ip[: ip.rfind('.')] + '.1'for ip in ips ]
+    )
+#
 
 # Application definition
 
@@ -45,23 +54,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+     'django.contrib.admindocs',
 
     'rest_framework',
     'django_filters',
     'drf_spectacular',
     'debug_toolbar',
-    'django.contrib.admindocs',
 
-    'shopapp.apps.ShopappConfig',
+    'myapp.apps.MyappConfig',
     'accounts.apps.AccountsConfig',
     'myapiapp.apps.MyapiappConfig',
     'blogapp.apps.BlogappConfig',
 
-
-
-
-
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -94,7 +100,7 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'mysite.wsgi.application'
+WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
 # Database
@@ -138,11 +144,11 @@ USE_I18N = True
 
 USE_TZ = True
 
-LANGUAGES= (
-    ('hy', _('Armenian') ),
-    ('ru', _('Russia')),
-    ('en', _('English')),
-)
+# LANGUAGES= (
+#     ('hy', _('Armenian') ),
+#     ('ru', _('Russia')),
+#     ('en', _('English')),
+# )
 LOCALE_PATHS = [
     BASE_DIR / 'locale/'
 ]
@@ -201,7 +207,7 @@ MEDIA_ROOT = BASE_DIR / 'uploads'
 
 LOGFILE_NAME = BASE_DIR / 'log.txt'
 LOGFILE_SIZE = 400
-LOGFILE_SIZE = 1 * 1024 * 1024
+#LOGFILE_SIZE = 1 * 1024 * 1024
 LOGFILE_COUNT = 3
 
 
@@ -253,3 +259,4 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
 }
+

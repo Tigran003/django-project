@@ -1,0 +1,27 @@
+{% block title %}
+    Orders list
+{% endblock %}
+
+{% block body %}
+    <div>
+        {% for order in order %}
+            <div>
+                 <p><a href="{% url 'myapp:orders_details' pk=order.pk %}"
+                >delivery_address: {{ order.delivery_address }}</a></p>
+                <p>Promocode: {{ order.promocode }}</p>
+                <p>Color: {{ order.color }}</p>
+
+
+            </div>
+
+
+        {% endfor %}
+<div>
+    <a href="{% url 'myapp:create-order' %}"
+    >Create Order</a>
+    </div>
+        <div>
+    <a href="{% url 'myapp:products-list' %}"
+    >Go  to products list</a>
+    </div>
+{% endblock %}

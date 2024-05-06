@@ -26,9 +26,8 @@ import debug_toolbar
 
 urlpatterns = [
     path('admin/docs/', include('django.contrib.admindocs.urls')),
+    path('shop/',include('myapp.urls')),
     path('admin/', admin.site.urls),
-    path('shop/',include('shopapp.urls')),
-    path('accounts/',include('accounts.urls')),
     path('',include('myapiapp.urls')),
     path('blog/',include('blogapp.urls')),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
@@ -41,7 +40,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('accounts/',include('accounts.urls')),
-    path('shop/',include('shopapp.urls'))
+
 )
 
 

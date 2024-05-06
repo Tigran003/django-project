@@ -3,11 +3,11 @@ This module defines serializers for the Group and Product models using Django RE
 Serializers allow complex data such as querysets and model instances to be converted to native
 Python datatypes that can then be easily rendered into JSON, XML or other content types.
 """
-
-
+#
+# #
 from django.contrib.auth.models import Group
 from rest_framework import serializers
-from  shopapp.models import Product
+from  myapp.models import Product
 
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:

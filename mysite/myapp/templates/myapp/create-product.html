@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Create product</title>
+
+</head>
+<body>
+
+ <h1>Create a new product</h1>
+    <div>
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <input class=" input--submitButton" type="submit" value="Create">
+
+
+    </form>
+    </div>
+
+    <div>
+    <a href="{% url 'myapp:products-list' %}"
+    >Back to products list</a>
+    </div>
+
+</body>
+</html>

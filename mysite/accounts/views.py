@@ -105,3 +105,5 @@ class PasswordResetConfirmViewCustom(PasswordResetConfirmView):
 
 class PasswordResetCompleteViewCustom(PasswordResetCompleteView):
     template_name = "accounts/password_reset_sent.html"
+
+

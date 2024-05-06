@@ -1,0 +1,18 @@
+{% block title %}
+  Update Order
+{% endblock %}
+
+{% block body %}
+  <h1> Update Order</h1>
+<div>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Update</button>
+    </form>
+</div>
+
+<div>
+    <a href="{% url 'myapp:orders_details' pk=object.pk %}">Back to Order #{{ object.pk }}</a>
+</div>
+{% endblock %}

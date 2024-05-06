@@ -1,0 +1,26 @@
+{% block title %}
+   Product #{{product.pk}}
+{% endblock %}
+
+{% block body %}
+   <h1> Product <strong>{{ product.name }}</strong></h1>
+   <div>
+       <div> Description: <em>{{ product.description}}</em></div>
+       <div>Price: {{ product.price }} $</div>
+       <div>Discount: {{product.discount }}%</div>
+       <div>Archived: {{product.is_archived}}</div>
+
+        {% if product.preview %}
+                        <img src="{{product.preview.url}}" alt="{{product.preview.name}}" width="500" height="300">
+                {% endif %}
+   </div>
+  <div>
+      <a href="{% url 'myapp:products-list' %}">Back to products </a>
+  </div>
+ <div>
+        <a href="{% url 'myapp:update_product' pk=product.pk %}">Update product</a>
+    </div>
+ <div>
+        <a href="{% url 'myapp:delete_product' pk=product.pk %}">Archive product</a>
+    </div>
+{% endblock %}

@@ -54,6 +54,9 @@
     <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.shopapp_order" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.auth_permission" active-filter-id="EMPTY_FILTER" />
   </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
+  </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
     <filters />

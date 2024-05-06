@@ -9,7 +9,7 @@ It helps map the URLs to their corresponding view functions or classes in the ap
 from django.urls import path
 from .views import hello_world_view, GroupListView
 
-
+#
 app_name = 'myapiapp'
 
 
