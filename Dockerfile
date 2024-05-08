@@ -3,7 +3,7 @@ FROM python:3.10
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-WORKDIR /myapp
+WORKDIR /app
 
 COPY requirements.txt requirements.txt
 

@@ -8,7 +8,7 @@ import logging
 from timeit import default_timer
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import Group, User
-from django.http import HttpRequest, HttpResponse, HttpResponseRedirect, request
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect, request, JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, View, UpdateView, DeleteView, DetailView, CreateView
@@ -197,3 +197,20 @@ class HelloView(View):
             f"\n<h2>{products_line}</h2>"
 
         )
+
+class ProductsDataExportView(View):
+    def get(self, request: HttpRequest) -> JsonResponse:
+        products = Product.objects.order_by("pk").all()
+        products_data = [
+            {
+                "pk": product.pk,
+                "name": product.name,
+                "price": product.price,
+                "is_archived": product.is_archived,
+            }
+            for product in products
+        ]
+        elem = products_data[0]
+        name = elem['name']
+        print(name)
+        return JsonResponse({"products": products_data})

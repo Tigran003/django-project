@@ -26,5 +26,4 @@ class ArticleListView(ListView):
 
 
     def get_queryset(self):
-
         return Article.objects.select_related('author', 'category').prefetch_related('tags').defer('content')

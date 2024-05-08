@@ -1,6 +1,6 @@
 
 """
-Module: shopapp.models
+Module: myapp.models
 This module defines the database models for the shop application.
 """
 

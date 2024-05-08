@@ -16,7 +16,7 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="3781734d-75e2-44c3-9343-af9c044707c5">
+    <connection id="e33f8151-8c12-4552-800c-1ab3e6e30ef2">
       <console name="Connection" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
@@ -27,35 +27,23 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="3781734d-75e2-44c3-9343-af9c044707c5" />
+    <connection id="e33f8151-8c12-4552-800c-1ab3e6e30ef2" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.blockapp_article_tags" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.blockapp_category" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.auth_group_permissions" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.blockapp_article" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.blogapp_category" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.blogapp_tag" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.shopapp_product" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.blockapp_tag" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.blockapp_author" active-filter-id="EMPTY_FILTER">
-      <filter id="57c62326-d5ff-45d4-8324-52bcdc7825c2" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="id" operator="=" value="" active="true" />
-      </filter>
-    </filter-actions>
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.auth_user" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.auth_user_groups" active-filter-id="" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.auth_group" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.shopapp_order_products" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.blogapp_author" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.blogapp_article" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.blogapp_article_tags" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.blockapp_article_name" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.shopapp_order" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3781734d-75e2-44c3-9343-af9c044707c5" dataset="main.auth_permission" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="e33f8151-8c12-4552-800c-1ab3e6e30ef2" dataset="main.myapp_order" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="e33f8151-8c12-4552-800c-1ab3e6e30ef2" dataset="main.myapp_product" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="e33f8151-8c12-4552-800c-1ab3e6e30ef2" dataset="main.myapp_order_products" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
+  </component>
+  <component name="DBNavigator.Project.MethodExecutionManager">
+    <method-browser />
+    <execution-history>
+      <group-entries value="true" />
+      <execution-inputs />
+    </execution-history>
+    <argument-values-cache />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
@@ -63,7 +51,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="3781734d-75e2-44c3-9343-af9c044707c5" active="true" signed="true">
+      <connection id="e33f8151-8c12-4552-800c-1ab3e6e30ef2" active="true" signed="true">
         <database>
           <name value="Connection" />
           <description value="" />
@@ -80,7 +68,7 @@
           <tns-folder value="" />
           <tns-profile value="" />
           <files>
-            <file path="C:\Users\My PC\PycharmProjects\ThisIsMyProject\first\db.sqlite3" schema="main" />
+            <file path="C:\Users\My PC\PycharmProjects\ThisIsMyProject\mysite\db.sqlite3" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
@@ -110,7 +98,7 @@
           <session-management value="true" />
           <ddl-file-binding value="true" />
           <database-logging value="true" />
-          <connect-automatically value="false" />
+          <connect-automatically value="true" />
           <restore-workspace value="true" />
           <restore-workspace-deep value="false" />
           <environment-type value="default" />
